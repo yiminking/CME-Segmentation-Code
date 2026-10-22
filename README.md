@@ -172,35 +172,7 @@ configuration read in src/lora.py has been removed, so importing the model
 no longer requires a config file. Keep the supplied src tree: its SAM training forward path differs from stock
 SAM, including resized logits returned under low_res_logits.
 
-## Checks, remaining scope and licenses
-
-Run offline selection tests with:
-
-```sh
-python -m unittest discover -s tests -v
-```
-
-There are 18 tests: 15 selection tests plus three optional runtime regressions.
-The runtime regressions skip when their scientific dependencies are unavailable.
-All 18 passed in the tested environment. They cover strict quality exclusion,
-uppercase FITS extensions, configuration-independent model imports, Unicode
-annotation paths, exact one-hour boundaries, negative
-offsets, cross-midnight/year timing, UTC offsets, C2/C3 discrimination, invalid
-timestamps, preserved later observations, format round-trips and CLI audit
-output. Static checks cover every Python file and retained model logic.
-Additional integration checks passed: synthetic FITS preprocessing; GPU
-inference on one real 1024 x 1024 CME image with the supplied weights; conversion
-of its predicted mask into six LabelMe polygons; one optimization step followed
-by one development-validation frame; and a live one-file archive download. The
-training check produced finite gradients and a readable 48-tensor LoRA file.
-The test-trained weights are separate temporary outputs and do not replace the
-supplied LoRA weights. This is a smoke test, not full 90-epoch training, dataset-wide
-validation or reproduction of the manuscript's reported numerical results.
-
-Not included: catalog aggregation, automated matching of downloaded files to
-catalogued measurements, Level-0.5 calibration, complete FITS eligibility checks,
-final JSON-to-mask export, event_stats.csv generation, independent 100-frame
-evaluation or bootstrap analysis. This is a core code subset.
+## Licenses
 
 Third-party notices and licenses are retained in THIRD_PARTY_NOTICES.txt and
 LICENSES/. The dataset's CC BY 4.0 designation does not replace upstream
