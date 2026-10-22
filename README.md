@@ -21,6 +21,16 @@ files, observations and binary model files are omitted. All Python comments
 and docstrings in this package are in English. Provenance and changes are
 recorded in `SOURCE_MANIFEST.json`.
 
+## Dataset
+
+The dataset associated with this repository is:
+
+Wang, Y., Tan, X., Shan, J., Liu, X., Xu, Z., Liu, J., Jiang, Y., Yang, X., Feng, L., & Huang, X. (2026). *A Large-Scale Coronal Mass Ejection Instance Segmentation Dataset with Catalog-Guided Selection and Two-Stage Human Refinement*. Zenodo.
+
+**Dataset DOI:** [10.5281/zenodo.22869577](https://doi.org/10.5281/zenodo.22869577)
+
+This repository provides the core data-processing and SAM-LoRA code associated with the dataset. Please cite the dataset when using the released data.
+
 ## Installation
 
 Use a separate environment and run commands from the package root. This
