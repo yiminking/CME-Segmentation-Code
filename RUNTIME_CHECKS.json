@@ -1,0 +1,125 @@
+{
+  "release_version": 3,
+  "date": "2026-10-22",
+  "environment": {
+    "python": "3.9.16",
+    "platform": "Windows x64",
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "cuda_runtime": "11.8",
+    "packages": {
+      "torch": "2.0.1",
+      "torchvision": "0.15.2",
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "astropy": "6.0.1",
+      "sunpy": "5.1.5",
+      "PIL": "9.4.0",
+      "yaml": "6.0",
+      "sklearn": "1.4.1.post1",
+      "cv2": "4.8.1",
+      "monai": "1.2.0",
+      "safetensors": "0.3.3",
+      "matplotlib": "3.5.1",
+      "tqdm": "4.65.0"
+    }
+  },
+  "unit_and_regression_tests": {
+    "run": 18,
+    "passed": 18,
+    "skipped": 0
+  },
+  "integration_checks": {
+    "preprocessing": {
+      "status": "passed",
+      "details": {
+        "input": "synthetic FITS, not solar observations",
+        "frames": 4,
+        "skipped_512": 1,
+        "uppercase_FTS_extension": "passed",
+        "outputs": [
+          {
+            "file": "running_002.png",
+            "shape": [
+              1024,
+              1024,
+              3
+            ],
+            "min": 0,
+            "max": 229
+          },
+          {
+            "file": "running_003.png",
+            "shape": [
+              1024,
+              1024,
+              3
+            ],
+            "min": 0,
+            "max": 210
+          }
+        ]
+      }
+    },
+    "conversion": {
+      "status": "passed",
+      "details": {
+        "real_image": "2023-07-28T23_47_19_rd.png",
+        "mask_size": [
+          1024,
+          1024
+        ],
+        "foreground_pixels": 172731,
+        "polygons": 6,
+        "unicode_paths_and_background_reference": "passed"
+      }
+    },
+    "training": {
+      "status": "passed",
+      "details": {
+        "optimization_steps": 1,
+        "validation_frames": 1,
+        "checkpoint_tensors": 48,
+        "finite_gradients": true,
+        "cuda_peak_allocated_bytes": 8459235328,
+        "model_training_flag_after_validation": true,
+        "scope": "One optimization step and one validation frame only; not a model-quality benchmark"
+      }
+    },
+    "download": {
+      "status": "passed",
+      "details": {
+        "files": [
+          "22913383.fts"
+        ],
+        "header": {
+          "instrument": "LASCO",
+          "detector": "C2",
+          "size": [
+            1024,
+            1024
+          ],
+          "date_obs": "2023/07/28",
+          "time_obs": "23:48:05.588",
+          "calibration_level": "Not explicitly identified in the header; not independently verified"
+        }
+      }
+    },
+    "inference": {
+      "status": "passed",
+      "real_images": 1,
+      "image_size": [
+        1024,
+        1024
+      ],
+      "checkpoint": "supplied SAM ViT-B plus supplied rank-512 LoRA",
+      "execution": "CUDA, including invocation from outside the package directory"
+    }
+  },
+  "not_tested": [
+    "Full 90-epoch training",
+    "Full dataset regeneration",
+    "Published scientific metrics or counts",
+    "Fresh Python 3.10/3.11 environment installation"
+  ],
+  "original_supplied_model_weights": "Read for testing; not modified or replaced"
+}

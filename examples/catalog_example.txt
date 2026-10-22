@@ -1,0 +1,27 @@
+# Synthetic input for demonstrating the event-block format; not real observations.
+# Events 1 and 2 pass; 3 fails quality; 4 fails the one-hour rule; 5 has no quality.
+
+First C2 Appearance Date Time [UT]: 2023/07/29 12:00:00
+#QUALITY_INDEX: 3 (Typical)
+# HEIGHT DATE TIME ANGLE TEL FC COL ROW
+3.0 2023/07/29 12:12:00 90 C2 0 0 0
+4.0 2023/07/29 13:12:00 90 C2 0 0 0
+
+First C2 Appearance Date Time [UT]: 2023/07/30 23:30:00
+#QUALITY_INDEX: 4 (Good)
+# HEIGHT DATE TIME ANGLE TEL FC COL ROW
+3.0 2023/07/31 00:30:00 90 C2 0 0 0
+
+First C2 Appearance Date Time [UT]: 2023/08/01 12:00:00
+#QUALITY_INDEX: 2 (Fair)
+# HEIGHT DATE TIME ANGLE TEL FC COL ROW
+3.0 2023/08/01 12:12:00 90 C2 0 0 0
+
+First C2 Appearance Date Time [UT]: 2023/08/02 12:00:00
+#QUALITY_INDEX: 5 (Excellent)
+# HEIGHT DATE TIME ANGLE TEL FC COL ROW
+3.0 2023/08/02 13:00:01 90 C2 0 0 0
+
+First C2 Appearance Date Time [UT]: 2023/08/03 12:00:00
+# HEIGHT DATE TIME ANGLE TEL FC COL ROW
+3.0 2023/08/03 12:12:00 90 C2 0 0 0

@@ -1,0 +1,18 @@
+# Suggested compatibility ranges, NOT a recovered historical environment lock.
+# Runtime-tested on Python 3.9.16; Python 3.10/3.11 installations were not tested.
+# Install a compatible torch/torchvision pair first.
+# Original pyproject specified torch 2.0.1 and torchvision ^0.15.2.
+torch>=2.0.1,<2.1
+torchvision>=0.15.2,<0.16
+numpy>=1.24,<2
+Pillow>=9.4,<11
+matplotlib>=3.5.1,<3.9
+PyYAML>=6,<7
+safetensors>=0.3.3,<0.5
+opencv-python>=4.8,<4.11
+monai>=1.2,<1.4
+tqdm>=4.65,<5
+scikit-learn>=1.2,<1.6
+scipy>=1.10,<1.14
+astropy>=5.3,<6.2
+sunpy[map,net]>=5,<6

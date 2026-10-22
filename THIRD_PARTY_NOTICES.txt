@@ -1,0 +1,36 @@
+THIRD-PARTY ATTRIBUTION AND LICENSE SCOPE
+
+1. Segment Anything (SAM)
+Repository: https://github.com/facebookresearch/segment-anything
+Copyright (c) Meta Platforms, Inc. and affiliates.
+License: Apache License 2.0; see LICENSES/segment-anything-Apache-2.0.txt
+and src/segment_anything/LICENSE. Original source headers are retained.
+The included src/segment_anything tree is the copy supplied with the study.
+It must not be silently replaced with the stock pip/GitHub version: the local
+training forward path accepts an extra batch dimension and exposes resized
+logits under low_res_logits. Its historical base commit was not recorded.
+The training-forward changes were verified by reading the official version
+of segment_anything/modeling/sam.py on 2026-10-22. A complete historical diff
+is not asserted. Each packaged SAM Python file carries an added provenance
+notice; no executable logic in those supplied files was changed by packaging.
+
+2. Sam_LoRA
+Repository: https://github.com/MathieuNlp/Sam_LoRA
+Copyright (c) 2024 Mathieu Nalpon
+License: MIT; see LICENSES/Sam_LoRA-MIT.txt.
+The supplied project identifies MathieuNlp in its pyproject metadata and
+uses this project's LoRA/training structure. That upstream attribution is
+retained for the adapted src/lora.py, processor, data loading, utilities,
+and training code. The historical upstream revision is unspecified.
+
+3. Base checkpoint and Python dependencies
+Download sam_vit_b_01ec64.pth from the official SAM repository instructions.
+The base checkpoint is not included in this code archive. SAM's model
+license and third-party dependency licenses remain distinct from any
+dataset license and are not replaced by the dataset's CC BY 4.0 designation.
+
+4. Study-specific portions and trained LoRA parameters
+No explicit license for the study-specific original contributions or the
+trained LoRA parameters was present in the supplied folder. This local
+packaging step does not assign one. The authors should specify their chosen
+terms in the release record; third-party licenses above remain applicable.
